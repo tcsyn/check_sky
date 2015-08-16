@@ -1,0 +1,12 @@
+import random
+import subprocess
+
+output1 = random.randint(450,4500)
+output2 = random.randint(350,3500)
+output3 = random.randint(120,3400)
+
+rrd_call = subprocess.check_output(["rrdtool", "update", "/home/chris/scripts/test.rrd", "--template", "vA:vB:vC", "N:%s:%s:%s" % (output1,output2,output2)])
+
+#print "%s:%s:%s" % (output1,output2,output2)
+
+#print rrd_call
