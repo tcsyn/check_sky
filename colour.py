@@ -3,7 +3,7 @@ from html import HTML
 import subprocess
 import xml.etree.ElementTree as ET
 
-tree = ET.parse('/home/chris/scripts/test.xml')
+tree = ET.parse('test.xml')
 root = tree.getroot()
 
 H = HTML('html')
